@@ -39,12 +39,8 @@ $table = $installer->getConnection()
 
     // Add Index
     ->addIndex(
-        $installer->getIdxName('bastayalog/log', ['identifier']),
+        $installer->getIdxName('bastayalog/channels_database', ['identifier']),
         ['identifier']
-    )
-    ->addIndex(
-        $installer->getIdxName('bastayalog/log', ['event_type']),
-        ['event_type']
     );
 $installer->getConnection()->createTable($table);
 
