@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<config>
+    <menu>
+        <report>
+            <children>
+                <bastaya_log>
+                    <sort_order>99999</sort_order>
+                    <title>BastaYa Log</title>
+                    <action>adminhtml/bastayalog</action>
+                </bastaya_log>
+            </children>
+        </report>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <report>
+                        <children>
+                            <sbastaya_log translate="title">
+                                <title>BastaYa Log</title>
+                            </sbastaya_log>
+                        </children>
+                    </report>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

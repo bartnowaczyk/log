@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<BastaYa_Log>
+			<active>true</active>
+			<codePool>community</codePool>
+		</BastaYa_Log>
+	</modules>
+</config>

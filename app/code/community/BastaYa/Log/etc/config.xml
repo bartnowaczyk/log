@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <BastaYa_Log>
+            <version>1.0.0.0</version>
+        </BastaYa_Log>
+    </modules>
+
+    <global>
+        <helpers>
+            <bastayalog>
+                <class>BastaYa_Log_Helper</class>
+            </bastayalog>
+        </helpers>
+
+        <blocks>
+            <bastayalog>
+                <class>BastaYa_Log_Block</class>
+            </bastayalog>
+        </blocks>
+
+        <models>
+            <bastayalog>
+                <class>BastaYa_Log_Model</class>
+                <resourceModel>bastayalog_resource</resourceModel>
+            </bastayalog>
+
+            <bastayalog_resource>
+                <class>BastaYa_Log_Model_Resource</class>
+                <entities>
+                    <channels>
+                        <table>bastaya_log_channels</table>
+                    </channels>
+                    <channels_database>
+                        <table>bastaya_log</table>
+                    </channels_database>
+                </entities>
+            </bastayalog_resource>
+        </models>
+        <resources>
+            <bastayalog_setup>
+                <setup>
+                    <module>BastaYa_Log</module>
+                    <class>BastaYa_Log_Model_Resource_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </bastayalog_setup>
+
+            <bastayalog_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </bastayalog_write>
+
+            <bastayalog_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </bastayalog_read>
+        </resources>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <bastaya_log before="Mage_Adminhtml">BastaYa_Log_Adminhtml</bastaya_log>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <default>
+        <dev>
+            <bastaya_log>
+                <file_enabled>1</file_enabled>
+                <filename>bastaya.log</filename>
+                <emergency_channels>file</emergency_channels>
+                <alert_channels>file</alert_channels>
+                <alert_channels>file</alert_channels>
+                <critical_channels>file</critical_channels>
+                <error_channels>file</error_channels>
+                <warning_channels>file</warning_channels>
+                <notice_channels>file</notice_channels>
+                <info_channels>file</info_channels>
+                <debug_channels>file</debug_channels>
+            </bastaya_log>
+        </dev>
+    </default>
+</config>

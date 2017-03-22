@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+
+        <dev translate="label" module="core">
+            <groups>
+                <bastaya_log translate="label">
+                    <label>BastaYa Log</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <log_enabled translate="label">
+                            <label>BastaYa Log enabled </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>bastayalog/system_config_source_yesNo</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </log_enabled>
+                        <file_enabled translate="label">
+                            <label>File enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>bastayalog/system_config_source_yesNo</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><log_enabled>1</log_enabled></depends>
+                            <comment>BastaYa log - store log in the file.</comment>
+                        </file_enabled>
+                        <filename translate="label">
+                            <label>Log File name</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><file_enabled>1</file_enabled></depends>
+                            <comment>BastaYa log - default file name.</comment>
+                        </filename>
+                        <email_enabled translate="label">
+                            <label>Email enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>bastayalog/system_config_source_yesNo</source_model>
+                            <sort_order>21</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><log_enabled>1</log_enabled></depends>
+                            <comment>BastaYa log - sending email with log.  </comment>
+                        </email_enabled>
+                        <email_address translate="label">
+                            <label>Log Email address</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>22</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><email_enabled>1</email_enabled></depends>
+                            <comment>BastaYa log - default email address.  </comment>
+                        </email_address>
+                        <database_enabled translate="label">
+                            <label>Database enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>bastayalog/system_config_source_yesNo</source_model>
+                            <sort_order>31</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><log_enabled>1</log_enabled></depends>
+                            <comment>BastaYa log - Save logs in database enabled.  </comment>
+                        </database_enabled>
+                        <slack_enabled translate="label">
+                            <label>Slack enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>bastayalog/system_config_source_yesNo</source_model>
+                            <sort_order>41</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><log_enabled>1</log_enabled></depends>
+                            <comment>BastaYa log - Slack enabled.</comment>
+                        </slack_enabled>
+                        <slack_channel translate="label">
+                            <label>Slack channel URL</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>42</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><slack_enabled>1</slack_enabled></depends>
+                            <comment>BastaYa log - url for default Slack channel.  </comment>
+                        </slack_channel>
+                        <hipchat_enabled translate="label">
+                            <label>Hipchat enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>bastayalog/system_config_source_yesNo</source_model>
+                            <sort_order>51</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><log_enabled>1</log_enabled></depends>
+                            <comment>BastaYa log - Hipchat enabled.</comment>
+                        </hipchat_enabled>
+                        <hipchat_token translate="label">
+                            <label>Hipchat token</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>52</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><hipchat_enabled>1</hipchat_enabled></depends>
+                            <comment>BastaYa log - token for Hipchat API.</comment>
+                        </hipchat_token>
+                        <hipchat_room translate="label">
+                            <label>Hipchat room URL</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>53</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><hipchat_enabled>1</hipchat_enabled></depends>
+                            <comment>BastaYa log - Hipchat room for sending Log.</comment>
+                        </hipchat_room>
+                        <emergency_channels translate="label">
+                            <label>Emergency log channels</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>bastayalog/system_config_source_channels</source_model>
+                            <sort_order>91</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><log_enabled>1</log_enabled></depends>
+                            <comment>BastaYa log - Default channels for Emergency log.</comment>
+                        </emergency_channels>
+                        <alert_channels translate="label">
+                            <label>Alert log channels</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>bastayalog/system_config_source_channels</source_model>
+                            <sort_order>92</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><log_enabled>1</log_enabled></depends>
+                            <comment>BastaYa log - Default channels for alert log.</comment>
+                        </alert_channels>
+                        <critical_channels translate="label">
+                            <label>Critical log channels</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>bastayalog/system_config_source_channels</source_model>
+                            <sort_order>93</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><log_enabled>1</log_enabled></depends>
+                            <comment>BastaYa log - Default channels for critical log.</comment>
+                        </critical_channels>
+                        <error_channels translate="label">
+                            <label>Error log channels</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>bastayalog/system_config_source_channels</source_model>
+                            <sort_order>94</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><log_enabled>1</log_enabled></depends>
+                            <comment>BastaYa log - Default channels for error log.</comment>
+                        </error_channels>
+                        <warning_channels translate="label">
+                            <label>Warning log channels</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>bastayalog/system_config_source_channels</source_model>
+                            <sort_order>95</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><log_enabled>1</log_enabled></depends>
+                            <comment>BastaYa log - Default channels for warning log.</comment>
+                        </warning_channels>
+                        <notice_channels translate="label">
+                            <label>Notice log channels</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>bastayalog/system_config_source_channels</source_model>
+                            <sort_order>96</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><log_enabled>1</log_enabled></depends>
+                            <comment>BastaYa log - Default channels for notice log.</comment>
+                        </notice_channels>
+                        <info_channels translate="label">
+                            <label>Info log channels</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>bastayalog/system_config_source_channels</source_model>
+                            <sort_order>97</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><log_enabled>1</log_enabled></depends>
+                            <comment>BastaYa log - Default channels for info log.</comment>
+                        </info_channels>
+                        <debug_channels translate="label">
+                            <label>Debug log channels</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>bastayalog/system_config_source_channels</source_model>
+                            <sort_order>98</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><log_enabled>1</log_enabled></depends>
+                            <comment>BastaYa log - Default channels for debug log.</comment>
+                        </debug_channels>
+                    </fields>
+                </bastaya_log>
+            </groups>
+        </dev>
+    </sections>
+</config>

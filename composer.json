@@ -1,0 +1,12 @@
+{
+    "name": "bastaya/log",
+    "type": "magento-module",
+    "license":"MIT",
+    "description":"Magento module to complex log information (using db, email, file, slack, hipchat)",
+    "authors":[
+        {
+            "name":"Bartek Nowaczyk",
+            "email":"bart.nowaczyk@gmail.com"
+        }
+    ]
+}
