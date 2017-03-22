@@ -8,7 +8,7 @@ Magento BastaYa Log uses [Composer](http://getcomposer.org) and [Magento Compose
     $ curl -sS https://getcomposer.org/installer | php
     $ chmod a+x composer.phar
 
-If you are already using Magento Composer Installer and have an existing _composer.json_, add _https://github.com/barteknowaczyk/log_ to the repositories list and _bastaYa/log_ as a required dependency for your project. That's it!
+If you are already using Magento Composer Installer and have an existing _composer.json_, add _https://github.com/bartnowaczyk/log_ to the repositories list and _bastaYa/log_ as a required dependency for your project. That's it!
 
 If you do not have an existing Magento Composer Installer _composer.json_ file defined, you can use the following template.
 
